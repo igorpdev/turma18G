@@ -13,9 +13,8 @@ programa
 		
 		para (inteiro i = 0; i <= 4; i ++) {
 			escreva("Valores: ", valores[i], " \n")
-			
-			se (valores[i] > maiorValor) {
-				maiorValor = valores[i]
+				se (valores[i] > maiorValor) {
+					maiorValor = valores[i]
 			}			
 		}
 		escreva("O maior valor é: ", maiorValor)
