@@ -7,28 +7,28 @@ programa
 
 		para (inteiro linha = 0; linha < 4; linha ++) {
 			para (inteiro coluna = 0; coluna < 6; coluna ++) {
-			escreva("Insira valores para a matriz 1: ")
-			leia(N1[linha][coluna])
-			limpa()
-			}
-			}
-
-		para (inteiro linha = 0; linha < 4; linha ++) {
-			para (inteiro coluna = 0; coluna < 6; coluna ++) {
-			escreva("Insira valores para a matriz 2: ")	
-			leia(N2[linha][coluna])
-			limpa()
-			}
+				escreva("Insira valores para a matriz 1: ")
+				leia(N1[linha][coluna])
+				limpa()
+				}
 			}
 
 		para (inteiro linha = 0; linha < 4; linha ++) {
 			para (inteiro coluna = 0; coluna < 6; coluna ++) {
-			M1[linha][coluna] = N1[linha][coluna] + N2[linha][coluna]
-			M2[linha][coluna] = N2[linha][coluna] - N2[linha][coluna] 
+				escreva("Insira valores para a matriz 2: ")	
+				leia(N2[linha][coluna])
+				limpa()
+				}
+			}
+
+		para (inteiro linha = 0; linha < 4; linha ++) {
+			para (inteiro coluna = 0; coluna < 6; coluna ++) {
+				M1[linha][coluna] = N1[linha][coluna] + N2[linha][coluna]
+				M2[linha][coluna] = N2[linha][coluna] - N2[linha][coluna] 
 			
 			escreva("\n a)", N1[linha][coluna], " + ", N2[linha][coluna], " = ", M1[linha][coluna])
-               escreva("\n b)", N1[linha][coluna], " - ", N2[linha][coluna], " = ", M2[linha][coluna])
-			}
+			escreva("\n b)", N1[linha][coluna], " - ", N2[linha][coluna], " = ", M2[linha][coluna])
+				}
 			}
 	}
 }
