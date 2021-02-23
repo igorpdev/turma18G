@@ -9,14 +9,14 @@ programa
 		real media = 0.0
 		
 		para (inteiro i = 0; i < 10; i++) {
-		dado[i] = u.sorteia(1, 6)
+			dado[i] = u.sorteia(1, 6)
 		}
 
 		para (inteiro i = 0; i < 10; i ++) {
 			escreva("Valores indicados pelo dado: ", dado[i],"\n")
-		
-			se (dado[i] > maiorValor) {
-				maiorValor = dado[i]
+				
+				se (dado[i] > maiorValor) {
+					maiorValor = dado[i]
 			}
 		}
 		
