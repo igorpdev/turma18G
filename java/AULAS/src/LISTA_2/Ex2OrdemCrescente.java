@@ -15,21 +15,21 @@ public class Ex2OrdemCrescente {
 		System.out.println("Terceiro número:");
 		terceiroNum = ler.nextInt();
 	
-		if (primeiroNum <= segundoNum && primeiroNum <= terceiroNum) {
+		if ((primeiroNum <= segundoNum) && (primeiroNum <= terceiroNum)) {
 			if (segundoNum <= terceiroNum) {
 				System.out.println("Em ordem crescente temos: " + primeiroNum + " - " + segundoNum + " - " + terceiroNum);
 			}	else {
 					System.out.println("Em ordem crescente temos: " + primeiroNum + " - " + terceiroNum + " - " + segundoNum);
 				}
 		} 
-		if (segundoNum <= primeiroNum && segundoNum <= terceiroNum) {
+		if ((segundoNum <= primeiroNum) && (segundoNum <= terceiroNum)) {
 			if (primeiroNum <= terceiroNum) {
 				System.out.println("Em ordem crescente temos: " + segundoNum + " - " + primeiroNum + " - " + terceiroNum);
 			}	else {
 					System.out.println("Em ordem crescente temos: " + segundoNum + " - " + terceiroNum + " - " + primeiroNum);
 				}
 		} 
-		if (primeiroNum <= terceiroNum) {
+		else if (primeiroNum <= terceiroNum) {
 				System.out.println("Em ordem crescente temos: " + terceiroNum + " - " + primeiroNum + " - " + segundoNum);
 		}
 		else {
