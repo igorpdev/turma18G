@@ -24,7 +24,8 @@ public class Ex4ParImpar {
 				System.out.println("E elevado ao quadrado é: " + quadrado);
 		}
 	
-	ler.close();
+		ler.close();
+		
 	}
 }
 

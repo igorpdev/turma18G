@@ -8,7 +8,6 @@ public class Ex3CategoriaNadadores {
 		
 		Scanner ler = new Scanner(System.in);
 		int idadeNadador;
-		ler.close();
 		
 		System.out.println("Digite sua idade e diremos a categoria:");
 			idadeNadador = ler.nextInt();
@@ -33,6 +32,8 @@ public class Ex3CategoriaNadadores {
 		        }
 
 		System.out.println("Obrigado, volte sempre!");
+	
+		ler.close();
+	
 	}
-
 }

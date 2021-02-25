@@ -26,8 +26,9 @@ public class Ex1MaiorDeTres {
 		}
 		else if (primeiroNum == segundoNum || primeiroNum == terceiroNum || segundoNum == terceiroNum) {
 			System.out.println("Você digitou 2 ou mais números iguais.");
-		}
+		}		
+	
+		ler.close();
 		
-	ler.close();
 	}
 }

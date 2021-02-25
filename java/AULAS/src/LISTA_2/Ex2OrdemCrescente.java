@@ -36,6 +36,7 @@ public class Ex2OrdemCrescente {
 			System.out.println("Em ordem crescente temos: " + terceiroNum + " - " + segundoNum + " - " + primeiroNum);
 		}
 		
-	ler.close();
+		ler.close();
+		
 	}
 }
