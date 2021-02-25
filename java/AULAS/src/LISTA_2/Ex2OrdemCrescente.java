@@ -29,12 +29,12 @@ public class Ex2OrdemCrescente {
 					System.out.println("Em ordem crescente temos: " + segundoNum + " - " + terceiroNum + " - " + primeiroNum);
 				}
 		} 
-		else if (primeiroNum <= terceiroNum) {
-				System.out.println("Em ordem crescente temos: " + terceiroNum + " - " + primeiroNum + " - " + segundoNum);
-		}
-		else {
-			System.out.println("Em ordem crescente temos: " + terceiroNum + " - " + segundoNum + " - " + primeiroNum);
-		}
+		//else if (primeiroNum <= terceiroNum) {
+		//		System.out.println("Em ordem crescente temos: " + terceiroNum + " - " + primeiroNum + " - " + segundoNum);
+		//}
+		//else {
+			//System.out.println("Em ordem crescente temos: " + terceiroNum + " - " + segundoNum + " - " + primeiroNum);
+		//}
 		
 		ler.close();
 		
