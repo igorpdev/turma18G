@@ -26,6 +26,14 @@ public class Ex4ParImpar {
 	
 		ler.close();
 		
+		/*
+		 * operador tenario
+		 * 
+		 * resposta = ((numero % 2 == 0) ? "O NÚMERO É PAR!" : "O NÚMERO É ÍMPAR!");
+		 * System.out.println(resposta);
+		 * 
+		 */
+		
 	}
 }
 
