@@ -2,14 +2,17 @@ package APLICACAO;
 
 import java.util.Scanner;
 import CLASSES.ContaEstudantil;
+import CLASSES.Conta;
 
 public class Banco {
 	public static void main(String[] args) {
 		
 		Scanner leia = new Scanner(System.in);
-		int numero = 0; String cpf = null, tipoConta = null; boolean ativa = false;
+		int numero = 0; String cpf = null;
+		int tipoConta = 0; boolean ativa = false;
 		
 		ContaEstudantil contaEstudantil = new ContaEstudantil(numero, cpf, ativa, tipoConta);
+		Conta contaCliente = new Conta(numero, cpf, ativa, tipoConta); 
 		
 		System.out.println("\t*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
 		System.out.println();
@@ -28,24 +31,25 @@ public class Banco {
 		System.out.println();
 		System.out.println("\t*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
 		
-		tipoConta = leia.next();
-		if (tipoConta == "1") {
+		tipoConta = leia.nextInt();
+		if (tipoConta == 1) {
 		}
-		else if (tipoConta == "2") {
+		else if (tipoConta == 2) {
 		}
-		else if (tipoConta == "3") {
+		else if (tipoConta == 3) {
 		}
-		else if (tipoConta == "4") {
+		else if (tipoConta == 4) {
 		}
 		/////////////////////////////////////////////////////// Igor Pereira /////////////////////////////////////
-		else if (tipoConta == "5") {
+		else if (tipoConta == 5) {
 			System.out.println("\t\t\t Tipo de conta selecionada: Estudantil");
-			
+			System.out.println("\t\t\t Digite o número da sua conta:");
+			numero = leia.nextInt();
+			contaCliente.setNumero(numero);
 		}
-		else if (tipoConta == "6") {
-			System.out.println("Operação encerrada.");
+		else if (tipoConta == 6) {
+			System.out.println("\t\t\t Operação encerrada.");
 		}
-		
 		
 		/*Scanner leia = new Scanner(System.in);
 		Conta conta3 = new Conta(345, "111.222.333-00", true);

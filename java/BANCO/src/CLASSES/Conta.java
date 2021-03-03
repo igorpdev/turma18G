@@ -7,7 +7,7 @@ public class Conta {
 	private double saldo;
 	private boolean ativa;
 	
-	public Conta (int numero, String cpf, boolean ativa) {
+	public Conta (int numero, String cpf, boolean ativa, int tipoConta) {
 		this.numero = numero;   //construtor
 		this.cpf = cpf;
 		this.ativa = ativa;

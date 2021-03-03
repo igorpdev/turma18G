@@ -7,13 +7,12 @@ public class ContaEstudantil extends Conta {
 
 	Scanner leia = new Scanner(System.in);
 	
-	private String tipoConta;
+	private int tipoConta;
 	
-	public ContaEstudantil(int numero, String cpf, boolean ativa, String tipoConta) {
-		super(numero, cpf, ativa);
+	public ContaEstudantil(int numero, String cpf, boolean ativa, int tipoConta) {
+		super(numero, cpf, ativa, tipoConta);
 		this.setTipoConta(tipoConta);
 	}
-	
 	
 	private double limiteEstudantil;
 	private double usarEstudantil;
@@ -49,11 +48,11 @@ public class ContaEstudantil extends Conta {
 		return novoSaldo;
 	}*/
 
-	public String getTipoConta() {
+	public int getTipoConta() {
 		return tipoConta;
 	}
 
-	public void setTipoConta(String tipoConta) {
+	public void setTipoConta(int tipoConta) {
 		this.tipoConta = tipoConta;
 	}
 }
