@@ -1,26 +1,34 @@
 package APLICACAO;
 
 import java.util.Scanner;
-import CLASSES.ContaEstudantil;
+
 import CLASSES.Conta;
+import CLASSES.ContaEspecial;
+import CLASSES.ContaEstudantil;
 
 public class Banco {
+
 	public static void main(String[] args) {
-		
-		Scanner leia = new Scanner(System.in);
-		int numero = 0; String cpf = null;
-		int tipoConta = 0; boolean ativa = false;
-		
-		ContaEstudantil contaEstudantil = new ContaEstudantil(numero, cpf, ativa, tipoConta);
-		Conta contaCliente = new Conta(numero, cpf, ativa, tipoConta); 
-		
-		System.out.println("\t*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
+		int numero = 0;
+		String cpf = null;
+		int tipoConta = 0;
+		boolean ativa = false;
+		Scanner ler = new Scanner(System.in);
+		ContaEspecial contaMagica = null;
+		ContaEstudantil contaEstudante = null;
+		String continuar = null;
+		int operaçoes = 0;
+		String[] movimentos = new String[10];
+		String movimento = null;
+		double valor = 0.00;
+		// chamar a minha conta
+		System.out.println("\t*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
 		System.out.println();
-		System.out.println("\t\t\t     KIBGJ-G1 BANK ");
+		System.out.println("\t\t\t\t KIGBJ-G1 BANK ");
 		System.out.println();
-		System.out.println("\t*~*~*~*~*~*~*~*~*~*~*~* [SLOGAN] *~*~*~*~*~*~*~*~*~*~*~*");
+		System.out.println("\t*~*~*~*~*~*~ [Dê um Xeque-Mate na sua dor de cabeça] ~*~*~*~*~*~*");
 		System.out.println();
-		System.out.println("\t*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
+		System.out.println("\t*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
 		System.out.println();
 		System.out.println("\t\t\t [1] Conta Poupança");
 		System.out.println("\t\t\t [2] Conta Corrente");
@@ -29,50 +37,86 @@ public class Banco {
 		System.out.println("\t\t\t [5] Conta Estudantil");
 		System.out.println("\t\t\t [6] Sair");
 		System.out.println();
-		System.out.println("\t*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
-		
-		tipoConta = leia.nextInt();
+		System.out.println("\t*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
+
+		tipoConta = ler.nextInt();
 		if (tipoConta == 1) {
+		} else if (tipoConta == 2) {
 		}
-		else if (tipoConta == 2) {
-		}
+		// Giulliana Munhoz //
 		else if (tipoConta == 3) {
-		}
+			System.out.println("\t\t Tipo de conta selecionada: Estpecial");
+			System.out.println("\t\t Digite o número da sua conta:");
+			numero = ler.nextInt();
+			System.out.println("\t\t Digite o número do seu CPf:");
+			cpf = ler.next();
+			contaMagica = new ContaEspecial(numero, cpf, true, 1000.00); 
+		} 
 		else if (tipoConta == 4) {
 		}
-		/////////////////////////////////////////////////////// Igor Pereira /////////////////////////////////////
+		// Igor Pereira //
 		else if (tipoConta == 5) {
-			System.out.println("\t\t\t Tipo de conta selecionada: Estudantil");
-			System.out.println("\t\t\t Digite o número da sua conta:");
-			numero = leia.nextInt();
-			contaCliente.setNumero(numero);
-		}
-		else if (tipoConta == 6) {
-			System.out.println("\t\t\t Operação encerrada.");
-		}
+			System.out.println("\t\t Tipo de conta selecionada: Estudante");
+			System.out.println();
+			System.out.print("\t\t Digite o número da sua conta: ");
+			numero = ler.nextInt();
+			System.out.print("\t\t Digite o número do seu CPF: ");
+			cpf = ler.next();
+			contaEstudante = new ContaEstudantil(numero, cpf, true);
 		
-		/*Scanner leia = new Scanner(System.in);
-		Conta conta3 = new Conta(345, "111.222.333-00", true);
-		double valor;
-		char opcao;
-		
-		System.out.println("Digite o valor:");
-		valor = leia.nextDouble();
-		System.out.println("Débito ou crédito? C/D");
-		opcao = leia.next().toUpperCase().charAt(0);
-		if (opcao == 'D') {
-			conta3.debito(valor);
+		} else if (tipoConta == 6) {
+			System.out.println("\t\t Operação encerrada.");
+			return;
 		}
-		else if (opcao == 'C') {
-			conta3.credito(valor);
-		} else {
-			System.out.println("Opção inválida!");
-		}
-		conta3.credito(100);
-		conta3.debito(45.25);
-		System.out.println(conta3.getSaldo());
-		
-		leia.close(); */
+		do {
+			System.out.println("\t*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
+			System.out.println();
+			System.out.println("\t\t\t\tKIGBJ-G1 BANK ");
+			System.out.println();
+			System.out.println("\t*~*~*~*~*~*~ [Dê um Xeque-Mate na sua dor de cabeça] ~*~*~*~*~*~*");
+			System.out.println();
+			System.out.println("\t*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
+			System.out.println();
+			if (tipoConta == 3) {
+				System.out.println("Conta Especial");
+				System.out.println("Saldo " + contaMagica.getSaldo());
+				System.out.println("MOVIMENTO [D] Débito ou [C] Crédito: ");
+				movimento = ler.next();
+				System.out.println("Valor movimento: R$  ");
+				valor = ler.nextDouble();
+				if (movimento.equalsIgnoreCase("C")) {
+					contaMagica.credito(valor);
+					movimentos[operaçoes] = "Crédito " + valor;
+				} else {
+					contaMagica.debito(valor);
+					movimentos[operaçoes] = "Débito " + valor;
+				}
+				operaçoes = operaçoes + 1;
+				System.out.print("\t\t\tContinuar S/N: ");
+				continuar = ler.next();
+			}
+			else if (tipoConta == 5) {
+				System.out.println("\t\t\t\tConta Estudante");
+				System.out.println("\t*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
+				System.out.println("\t\t\tSaldo " + contaEstudante.getSaldo());
+				System.out.print("\t\t\tMOVIMENTO [D] Débito ou [C] Crédito: ");
+				movimento = ler.next();
+				System.out.print("\t\t\tValor movimento: R$  ");
+				valor = ler.nextDouble();
+				if (movimento.equalsIgnoreCase("C")) {
+					contaEstudante.credito(valor);
+					movimentos[operaçoes] = "\t\t\tCrédito " + valor;
+				} else {
+					contaEstudante.debito(valor);
+					movimentos[operaçoes] = "\t\t\tDébito " + valor;
+				}
+				operaçoes = operaçoes + 1;
+				}
+				System.out.print("\t\t\tContinuar S/N: ");
+				continuar = ler.next();
+
+		} while (continuar.equalsIgnoreCase("S") && operaçoes < 10);
+		System.out.println(movimentos);
 	}
 
 }

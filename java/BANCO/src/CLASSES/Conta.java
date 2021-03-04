@@ -4,10 +4,10 @@ public class Conta {
 
 	private int numero;
 	private String cpf;
-	private double saldo;
+	protected double saldo;
 	private boolean ativa;
 	
-	public Conta (int numero, String cpf, boolean ativa, int tipoConta) {
+	public Conta (int numero, String cpf, boolean ativa) {
 		this.numero = numero;   //construtor
 		this.cpf = cpf;
 		this.ativa = ativa;
