@@ -65,5 +65,5 @@ select * from tb_categoria inner join tb_produto on tb_categoria.id = tb_produto
 select avg (preco) FROM tb_produto;
 select sum(preco) from tb_produto;
 
-select sum(qtd) from tb_produto; 
+select count(id) from tb_produto;
 select * from tb_produto where categoria_id=2;
