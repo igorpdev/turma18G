@@ -4,30 +4,30 @@ use db_minha_casa_mais_bonita;
 
 CREATE TABLE `tb_produto` (
 	`id` INT NOT NULL AUTO_INCREMENT,
-	`nome` varchar(255),
-	`marca` varchar(255),
-	`pronta_entrega` BOOLEAN,
-	`preco` DECIMAL,
-	`qtd` INT,
-	`categoria_id` INT,
+	`nome` varchar(255) NOT NULL,
+	`marca` varchar(255) NOT NULL,
+	`pronta_entrega` BOOLEAN NOT NULL,
+	`preco` DECIMAL NOT NULL,
+	`qtd` INT NOT NULL,
+	`categoria_id` INT NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `tb_categoria` (
 	`id` INT NOT NULL AUTO_INCREMENT,
-	`sessao` varchar(255),
-	`tamanho` varchar(255),
-	`loja` varchar(255),
+	`sessao` varchar(255) NOT NULL,
+	`tamanho` varchar(255) NOT NULL,
+	`loja` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `tb_usuario` (
 	`id` INT NOT NULL AUTO_INCREMENT,
-	`nome` varchar(255),
-	`idade` INT,
-	`documento` varchar(255),
-	`endereco` varchar(255),
-	`email` varchar(255),
+	`nome` varchar(255) NOT NULL,
+	`idade` INT NOT NULL,
+	`documento` varchar(255) NOT NULL,
+	`endereco` varchar(255) NOT NULL,
+	`email` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
